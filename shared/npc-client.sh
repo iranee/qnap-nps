@@ -16,7 +16,7 @@ case "$1" in
     if [ "$ENABLED" != "TRUE" ]; then
         echo "$QPKG_NAME 已经禁用"
         exit 1
-
+	fi
     if [ ! -d "$QPKG_ROOT/conf/npc-config.json" ];then
     echo '{"command":"","pwd":"123456","change":"0"}' >$QPKG_ROOT/conf/npc-config.json
     fi
