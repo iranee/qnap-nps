@@ -1,4 +1,4 @@
-# nps/npc cl for QNAP
+# nps/npc client for QNAP
 
 ## 介绍
 本项目来源于：https://github.com/ehang-io/nps
