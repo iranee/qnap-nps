@@ -1,0 +1,31 @@
+#!/bin/sh
+CONF=/etc/config/qpkg.conf
+QPKG_NAME="npc"
+QPKG_ROOT=`/sbin/getcfg $QPKG_NAME Install_Path -f ${CONF}`
+
+killall -9 npcconfig > /dev/null 2>&1
+./npcconfig >&1 & 
+
+echo "version is:"
+./npc --version
+
+while true ; do
+cd $QPKG_ROOT
+pid=$(pidof "npc")
+command=$(cat $QPKG_ROOT/conf/npc-config.json | jq -r '.command')
+
+  if [[ -z "$pid" ]] && [[ "$command" == "1" ]]; then
+
+	echo `date '+%T'` "npc try running from npc.conf"
+	./npc
+  fi
+  
+  if [[ -z "$pid" ]] && [[ -n "$command" ]]; then
+	    echo `date '+%T'` "npc try running from command"        
+         ./npc $command
+   fi
+
+  echo `date '+%T'` "sleep 20s"
+  echo "npc is not ready"
+  sleep 20
+done

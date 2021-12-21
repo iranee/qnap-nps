@@ -1,0 +1,69 @@
+	        @font-face {
+          font-family: 'iconfont';  /* project id 674189 */
+          src: url('font_674189_dvawifegwrj.eot');
+          src: url('font_674189_dvawifegwrj.eot?#iefix') format('embedded-opentype'),
+          url('font_674189_dvawifegwrj.woff') format('woff'),
+          url('font_674189_dvawifegwrj.ttf') format('truetype'),
+          url('font_674189_dvawifegwrj.svg#iconfont') format('svg');
+        }
+        .iconfont {
+          display: inline-block;
+          font-family: 'iconfont';
+          font-style: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+                  -webkit-transform: translate(0, 0);
+                      -ms-transform: translate(0, 0);
+                          transform: translate(0, 0);
+          -webkit-text-stroke-width: 0.2px;
+        }
+
+        .bui-input {
+            box-sizing: border-box;
+            height: 40px;
+            padding: 8px 10px;
+            line-height: 24px;
+            border: 1px solid #DDDDDD;
+            color: #5F5F5F;
+            font-size: 12px;
+            vertical-align: middle;
+            border-radius: 4px;
+            width: 400px;
+        }
+        .bui-input:hover{
+            border: 1px #659aea solid;
+        }
+        .bui-input:focus {
+            outline: none;
+            border: 1px solid #4F9FE9;
+            box-shadow: 0 0 3px 0 #2171BB;
+            color: #595959;
+        }
+        .password-wrap { position: relative; width: 400px; }
+        .password-wrap .bt-showpwd { color: #999999; position: absolute; top: 8px; right: 10px; line-height: 24px; width: 24px; height: 24px;    text-align: center; cursor: pointer; }
+        .password-wrap .bt-showpwd.off::before { content: "\e60a"; font-family: "iconfont"; font-size: 18px; }
+        .password-wrap .bt-showpwd.on::before { content: "\e60b"; font-family: "iconfont"; font-size: 18px; }
+
+        .button{
+            -webkit-appearance: none;
+            background: #009dff;
+            border: none;
+            border-radius: 2px;
+            color: #fff;
+            cursor: pointer;
+            height: 35px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            letter-spacing: 0.05em;
+            text-align: center;
+            text-transform: uppercase;
+            transition: background 0.3s ease-in-out;
+            width: 120px;
+        }
+        .button:hover {
+            background: #00c8ff;
+        }
+
+        body{ text-align:left} 
+        .div{ margin:0 auto; width:472px;} 

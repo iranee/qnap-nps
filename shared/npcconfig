@@ -1,0 +1,26 @@
+#!/bin/sh
+CONF=/etc/config/qpkg.conf
+QPKG_NAME="npc"
+QPKG_ROOT=`/sbin/getcfg $QPKG_NAME Install_Path -f ${CONF}`
+
+sleep 5
+while true ; do
+
+		pid=$(pidof "npc")
+		change=$(cat $QPKG_ROOT/conf/npc-config.json | jq -r '.change')
+
+
+  if [[ -n "$pid" ]] && [[ "$change" == "1" ]]; then
+			echo "killall npc client..."	
+			killall -9 npc > /dev/null 2>&1
+			echo $(jq -c .change='"0"' $QPKG_ROOT/conf/npc-config.json)>$QPKG_ROOT/conf/npc-config.json
+  fi
+
+#  if [[ "$(grep -c "connection refused" $QPKG_ROOT/conf/log.txt)" == "1" ]] || [[ "$(grep -c "Reconnecting" $QPKG_ROOT/conf/log.txt)" == "1" ]]; then
+#			echo "connection refused!"
+#  fi
+
+  echo "sleep 15"
+  sleep 15
+  
+done
