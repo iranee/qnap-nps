@@ -33,7 +33,7 @@ case "$1" in
 	killall -9 npcmonitor
 	killall -9 npcconfig
 	killall -9 npc
-	rm $APACHE_ROOT/$QPKG_NAME
+	rm -rf $APACHE_ROOT/npc
 
 	;;
 
