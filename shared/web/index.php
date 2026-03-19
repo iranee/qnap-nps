@@ -43,7 +43,7 @@ if ( isset($_POST['command']) )
 
 
 <td colspan='2'><br />
-<p span style="color:green;">当『命令参数』为<font color="red">１</font>时开启<font color="#ff6a00">配置文件</font>启动模式，否则运行<font color="#ff6a00">客户端命令</font><br /><br />『客户端命令』填入从<font color="#ff6a00">服务端</font>获取命令的红字部分：<br />./npc <font color="red">-server=IP:8024 -vkey=******** -type=tcp</font></span></p>
+<p span style="color:green;">当『命令参数』为<font color="red">１</font>时开启<font color="#ff6a00">配置文件</font>启动模式，否则运行<font color="#ff6a00">客户端命令</font><br /><br />『客户端命令』填入从<font color="#ff6a00">服务端</font>获取命令的蓝字部分不要冒号：<br />./npc <font color="blue">-server=IP:8024 -vkey=******** -type=tcp</font></span></p>
 <p><span id="spn_message">进程状态检测中...</span><br />
 <p align='center' >
     <br />
